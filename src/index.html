@@ -5,6 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Restaurant Guru</title>
         <link rel="stylesheet" href="./dist/css/style.min.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./dist/img/favicons/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./dist/img/favicons/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./dist/img/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="./dist/img/favicons/site.webmanifest" />
     </head>
     <body>
         <header class="main-header">
@@ -15,7 +30,7 @@
                     </a>
 
                     <div class="main-header__nav-wrapper">
-                        <form class="search" action="" method="get">
+                        <form class="search" action="#!" method="post">
                             <label class="search__command" for="smartsearch">Найти:</label>
                             <input
                                 class="search__field"
@@ -24,15 +39,16 @@
                                 id="smartsearch"
                                 placeholder="Рестораны" />
 
-                            <div class="search__delimeter"></div>
+                            <div class="search__delimiter"></div>
 
-                            <label class="search__command" for="smartsearch1">Где:</label>
+                            <label class="search__command" for="smartposition">Где:</label>
                             <input
                                 class="search__field"
                                 type="text"
-                                name="smartsearch1"
-                                id="smartsearch1"
+                                name="smartposition"
+                                id="smartposition"
                                 placeholder="Москва" />
+
                             <button class="search__button" type="submit">
                                 <span class="visually-hidden">Найти</span>
                                 <svg
@@ -48,7 +64,127 @@
                             </button>
                         </form>
 
-                        <div class="dropdown"></div>
+                        <div class="dropdown">
+                            <button class="dropdown__button js_dropdown" type="button">
+                                <svg
+                                    width="23"
+                                    height="17"
+                                    viewBox="0 0 23 17"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_23_13296)">
+                                        <path d="M23 0.220703H0V5.7407H23V0.220703Z" fill="white" />
+                                        <path
+                                            d="M23 5.74023H0V11.2602H23V5.74023Z"
+                                            fill="#323E95" />
+                                        <path
+                                            d="M23 11.2598H0V16.7798H23V11.2598Z"
+                                            fill="#D8001E" />
+                                        <path
+                                            d="M23 0.220703H0V1.1407H23V0.220703Z"
+                                            fill="#D9D9D9" />
+                                        <path
+                                            d="M0.92 0.220703H0V5.7407H0.92V0.220703Z"
+                                            fill="#D9D9D9" />
+                                        <path
+                                            d="M23 0.220703H22.08V5.7407H23V0.220703Z"
+                                            fill="#D9D9D9" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_23_13296">
+                                            <rect
+                                                width="23"
+                                                height="16.56"
+                                                fill="white"
+                                                transform="translate(0 0.220703)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <ul class="dropdown__list js_list">
+                                <span class="dropdown__list_cross js_cross">
+                                    <svg
+                                        width="11"
+                                        height="12"
+                                        viewBox="0 0 11 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.606689 1L10.6067 11" stroke-miterlimit="10" />
+                                        <path d="M0.606689 11L10.6067 1" stroke-miterlimit="10" />
+                                    </svg>
+                                </span>
+                                <li class="dropdown__item dropdown__item_eng">
+                                    <svg
+                                        width="25"
+                                        height="18"
+                                        viewBox="0 0 25 18"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_23_35267)">
+                                            <path d="M25 0H0V16H25V0Z" fill="white" />
+                                            <path
+                                                d="M25 3.68994H0V4.91994H25V3.68994Z"
+                                                fill="white" />
+                                            <path d="M25 4H0V6H25V4Z" fill="#CB001C" />
+                                            <path d="M25 0H0V2H25V0Z" fill="#CB001C" />
+                                            <path d="M12.53 0H0V8H12.53V0Z" fill="#2A3560" />
+                                            <path
+                                                d="M1.97998 1L2.20998 1.72H2.97998L2.35998 2.18L2.58998 2.9L1.97998 2.46L1.35998 2.9L1.58998 2.18L0.97998 1.72H1.74998L1.97998 1Z"
+                                                fill="white" />
+                                            <path
+                                                d="M5.97998 1L6.20998 1.72H6.97998L6.35998 2.18L6.58998 2.9L5.97998 2.46L5.35998 2.9L5.58998 2.18L4.97998 1.72H5.74998L5.97998 1Z"
+                                                fill="white" />
+                                            <path
+                                                d="M9.97998 1L10.21 1.72H10.98L10.36 2.18L10.59 2.9L9.97998 2.46L9.35998 2.9L9.58998 2.18L8.97998 1.72H9.74998L9.97998 1Z"
+                                                fill="white" />
+                                            <path
+                                                d="M3.97998 3L4.20998 3.72H4.97998L4.35998 4.18L4.58998 4.9L3.97998 4.46L3.35998 4.9L3.58998 4.18L2.97998 3.72H3.74998L3.97998 3Z"
+                                                fill="white" />
+                                            <path
+                                                d="M7.97998 3L8.20998 3.72H8.97998L8.35998 4.18L8.58998 4.9L7.97998 4.46L7.35998 4.9L7.58998 4.18L6.97998 3.72H7.74998L7.97998 3Z"
+                                                fill="white" />
+                                            <path
+                                                d="M1.97998 5L2.20998 5.72H2.97998L2.35998 6.18L2.58998 6.9L1.97998 6.46L1.35998 6.9L1.58998 6.18L0.97998 5.72H1.74998L1.97998 5Z"
+                                                fill="white" />
+                                            <path
+                                                d="M5.97998 5L6.20998 5.72H6.97998L6.35998 6.18L6.58998 6.9L5.97998 6.46L5.35998 6.9L5.58998 6.18L4.97998 5.72H5.74998L5.97998 5Z"
+                                                fill="white" />
+                                            <path
+                                                d="M9.97998 5L10.21 5.72H10.98L10.36 6.18L10.59 6.9L9.97998 6.46L9.35998 6.9L9.58998 6.18L8.97998 5.72H9.74998L9.97998 5Z"
+                                                fill="white" />
+                                            <path d="M25 8H0V10H25V8Z" fill="#CB001C" />
+                                            <path d="M25 12H0V14H25V12Z" fill="#CB001C" />
+                                            <path d="M25 16H0V18H25V16Z" fill="#CB001C" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_23_35267">
+                                                <rect width="25" height="18" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <a href="#!" class="dropdown__link">English</a>
+                                </li>
+                                <li class="dropdown__item dropdown__item_esp">
+                                    <svg
+                                        width="25"
+                                        height="18"
+                                        viewBox="0 0 25 18"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_23_35286)">
+                                            <path d="M25 0H0V18H25V0Z" fill="#B5002A" />
+                                            <path d="M25 4.5H0V13.5H25V4.5Z" fill="#F4C327" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_23_35286">
+                                                <rect width="25" height="18" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <a href="#!" class="dropdown__link">Espanol</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>

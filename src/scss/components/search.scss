@@ -1,27 +1,29 @@
 .search {
     display: flex;
+    z-index: 3;
     width: 58.2rem;
+    max-width: 58.2rem;
     max-height: 4rem;
     padding: 0 0 0 1.4rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 1.7rem;
     line-height: 235%;
-    color: #010101;
-    border: 1px solid #cfcfcf;
+    color: var(--color-text);
+    border: 1px solid var(--color-grey);
     border-radius: 1rem;
 
     &__command {
         margin-right: 8px;
     }
 
-    &__delimeter {
+    &__delimiter {
         width: 1px;
         height: 2.8rem;
         margin-right: 1.6rem;
-        background: #cfcfcf;
+        background: var(--color-grey);
     }
 
     &__field {
@@ -32,7 +34,7 @@
             font-weight: 400;
             font-size: 1.7rem;
             line-height: 235%;
-            color: #010101;
+            color: var(--color-text);
             opacity: 1;
         }
     }
@@ -42,10 +44,10 @@
         z-index: 1;
         width: 5rem;
         height: 4rem;
-        padding: 0;
+        margin-left: auto;
         align-items: center;
         justify-content: center;
-        background: #754040;
+        background: var(--color-accent);
         border: none;
         border-radius: 0 10px 10px 0;
         transition: opacity 0.3s ease;
