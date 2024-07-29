@@ -4,8 +4,7 @@
     &__button {
         position: relative;
         z-index: 2;
-        width: 25px;
-        height: 18px;
+        cursor: pointer;
     }
 
     &__list {
@@ -25,7 +24,7 @@
         border-radius: 0 0 10px 10px;
         box-shadow: 0 0 8px 0 rgba(134, 135, 137, 0.25);
         opacity: 0;
-        transition: transform 0.5s ease, opacity 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.5s ease, z-index 0.1s ease;
 
         &_cross {
             margin-left: auto;
@@ -45,11 +44,12 @@
             transform: translateY(0%);
             z-index: 3;
             opacity: 1;
-            transition: transform 0.3s ease, opacity 0.5s ease;
+            transition: transform 0.3s ease, opacity 0.5s ease, z-index 0.1s ease;
         }
     }
 
-    &__item {
+    &__item,
+    &__link {
         display: flex;
         align-items: center;
         justify-content: space-between;

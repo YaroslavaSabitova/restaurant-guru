@@ -16,15 +16,15 @@ export default function () {
 
     swiper.autoplay.stop();
 
-    const $controls = document.querySelectorAll('[data-control]');
+    const controls = document.querySelectorAll('[data-control]');
 
-    if ($controls.length) {
-        $controls.forEach($control => {
-            $control.addEventListener('click', e => {
+    if (controls.length) {
+        controls.forEach(control => {
+            control.addEventListener('click', e => {
                 e.preventDefault();
                 e.stopPropagation();
 
-                if ($control.dataset.control === 'next') {
+                if (control.dataset.control === 'next') {
                     swiper.slideNext();
                 } else {
                     swiper.slidePrev();
