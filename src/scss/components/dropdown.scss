@@ -1,9 +1,11 @@
 .dropdown {
     position: relative;
+    margin-top: 7px;
 
     &__button {
         position: relative;
         z-index: 2;
+        color: var(--color-transparent);
         cursor: pointer;
     }
 

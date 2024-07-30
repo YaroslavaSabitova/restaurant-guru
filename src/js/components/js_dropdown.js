@@ -2,7 +2,6 @@ export default function () {
     const btn = document.querySelector('.js_dropdown');
     const list = document.querySelector('.js_list');
     const cross = document.querySelector('.js_cross');
-    const flags = document.querySelectorAll('.js_flag');
     const links = document.querySelectorAll('.js_link');
 
     btn.addEventListener('click', () => {
@@ -19,20 +18,13 @@ export default function () {
         }
     });
 
-    flags.forEach(flag => {
-        flag.addEventListener('click', event => {
-            const flagTarget = event.currentTarget;
-
-            btn.src = flagTarget.src;
-            list.classList.remove('active');
-        });
-    });
-
     links.forEach(link => {
         link.addEventListener('click', event => {
             const linkTarget = event.currentTarget;
+            const newLink = btn.innerHTML;
 
-            console.log('linkTarget', linkTarget);
+            btn.innerHTML = linkTarget.innerHTML;
+            linkTarget.innerHTML = newLink;
 
             list.classList.remove('active');
         });
