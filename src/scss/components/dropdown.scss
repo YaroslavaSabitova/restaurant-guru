@@ -2,6 +2,12 @@
     position: relative;
     margin-top: 7px;
 
+    @media (max-width: 575px) {
+        position: absolute;
+        top: 15%;
+        right: 2%;
+    }
+
     &__button {
         position: relative;
         z-index: 2;

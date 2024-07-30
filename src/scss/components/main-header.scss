@@ -1,6 +1,11 @@
 .main-header {
     position: relative;
     padding: 1.8rem 0 2rem;
+    border: 1px solid red;
+
+    @media (max-width: 767px) {
+        padding: 1.4rem 0 1.5rem;
+    }
 
     &__nav,
     &__nav-wrapper {
@@ -9,7 +14,35 @@
         justify-content: space-between;
     }
 
+    &__nav {
+        @media (max-width: 1135px) {
+            justify-content: space-around;
+        }
+
+        @media (max-width: 575px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 350px) {
+            justify-content: flex-start;
+        }
+    }
+
     &__nav-wrapper {
         gap: 2rem;
+    }
+
+    &__logo_large {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__logo_small {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
     }
 }
