@@ -1,0 +1,11 @@
+.title {
+    position: relative;
+
+    &_link {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 117%;
+        color: var(--color-black);
+    }
+}

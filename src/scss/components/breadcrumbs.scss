@@ -37,10 +37,5 @@
         font-weight: 400;
         font-size: 1.4rem;
         color: var(--color-white);
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: var(--color-accent-light);
-        }
     }
 }
