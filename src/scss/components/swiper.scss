@@ -16,6 +16,19 @@
         background: #f6f6f6 !important;
         border: 1px solid #f6f6f6;
         border-radius: 100% !important;
+        transition: border 0.3s ease;
+
+        @media (max-width: 1199px) {
+            right: 7% !important;
+        }
+
+        @media (max-width: 991px) {
+            right: 1.5% !important;
+        }
+
+        @media (max-width: 767px) {
+            display: none !important;
+        }
 
         svg g path {
             fill: #616161 !important;
@@ -38,6 +51,7 @@
     width: 286px;
     height: 192px !important;
     max-width: 286px;
+    margin-bottom: 8px !important;
     padding: 8px;
 
     // background: linear-gradient(180deg, rgba(91, 72, 74, 0.64) 0%, rgba(22, 19, 19, 0.64) 100%),
@@ -47,6 +61,13 @@
 
     border-radius: 20px;
     transition: filter 0.5s ease !important;
+
+    @media (max-width: 575px) {
+        width: 96% !important;
+        max-width: 100% !important;
+        margin-right: 6px !important;
+        margin-bottom: 12px !important;
+    }
 
     &__time {
         display: inline-block;

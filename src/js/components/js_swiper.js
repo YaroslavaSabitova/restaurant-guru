@@ -21,15 +21,15 @@ export default function () {
             575: {
                 slidesPerView: 1
             },
-            650: {
+            767: {
                 slidesPerView: 2
             },
 
-            935: {
+            991: {
                 slidesPerView: 3
             },
 
-            1135: {
+            1199: {
                 slidesPerView: 4
             }
         }
