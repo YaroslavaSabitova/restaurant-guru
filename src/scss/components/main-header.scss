@@ -5,6 +5,7 @@
 
     @media (max-width: 767px) {
         padding: 1.4rem 0 1.5rem;
+        border-bottom: 1px solid #d5d8da;
     }
 
     &__nav,
@@ -15,10 +16,6 @@
     }
 
     &__nav {
-        @media (max-width: 1135px) {
-            justify-content: space-around;
-        }
-
         @media (max-width: 575px) {
             justify-content: center;
         }
