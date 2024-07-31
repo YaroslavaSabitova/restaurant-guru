@@ -3,6 +3,10 @@
     height: 100%;
     margin: 0 auto;
 
+    &-wrapper {
+        padding: 0 5px;
+    }
+
     &-button-next::after {
         display: none !important;
     }
@@ -54,12 +58,6 @@
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     overflow: hidden;
-
-    @media (max-width: 575px) {
-        width: 96% !important;
-        max-width: 100% !important;
-        margin-right: 6px !important;
-    }
 
     &__img {
         width: 100%;

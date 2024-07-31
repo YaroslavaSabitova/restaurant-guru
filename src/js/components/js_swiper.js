@@ -9,29 +9,13 @@ export default function () {
         autoplay: {
             delay: 3000
         },
-        slidesPerView: 4,
+        direction: 'horizontal',
+        slidesPerView: 'auto',
         spaceBetween: 20,
         loop: true,
         speed: 500,
         navigation: {
             nextEl: '.swiper-button-next'
-        },
-
-        breakpoints: {
-            575: {
-                slidesPerView: 1
-            },
-            767: {
-                slidesPerView: 2
-            },
-
-            991: {
-                slidesPerView: 3
-            },
-
-            1199: {
-                slidesPerView: 4
-            }
         }
     });
 
