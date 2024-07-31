@@ -23,3 +23,7 @@ This project is made with [Gulp](https://gulpjs.com/) toolkit and [npm](https://
 **Project** - https://yaroslavasabitova.github.io/restaurant-guru/
 
 **Preview**
+
+https://github.com/user-attachments/assets/2c056e7c-630d-4363-b93c-6801e1014d0b
+
+
