@@ -8,7 +8,7 @@
     }
 
     &-button-next {
-        top: 66% !important;
+        top: 53% !important;
         right: 6% !important;
         width: 45px !important;
         height: 45px !important;
@@ -48,33 +48,57 @@
 }
 
 .swiper-slide {
+    position: relative;
     width: 286px;
-    height: 192px !important;
     max-width: 286px;
-    margin-bottom: 8px !important;
-    padding: 8px;
-
-    // background: linear-gradient(180deg, rgba(91, 72, 74, 0.64) 0%, rgba(22, 19, 19, 0.64) 100%),
-    //     url(../img/photo.png) center/cover no-repeat;
-
-    background: url(../img/photo1.png) center/cover no-repeat;
-
-    border-radius: 20px;
-    transition: filter 0.5s ease !important;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    overflow: hidden;
 
     @media (max-width: 575px) {
         width: 96% !important;
         max-width: 100% !important;
         margin-right: 6px !important;
-        margin-bottom: 12px !important;
+    }
+
+    &__img {
+        width: 100%;
+        height: 192px;
+        margin-bottom: 8px;
+        background: url(../img/photo.png) center/cover no-repeat;
+        border-radius: 2rem;
+        transition: all 0.5s ease;
+
+        @media (max-width: 575px) {
+            margin-bottom: 12px;
+        }
+
+        &:hover {
+            transform: scale(1.07);
+            filter: brightness(1.3);
+        }
+    }
+
+    &:hover .star__img g path,
+    &:hover .menu__info_kitchen svg g path,
+    &:hover .route__time svg path {
+        fill: var(--color-star);
+    }
+
+    &:hover .star__rate {
+        color: var(--color-star);
     }
 
     &__time {
+        position: absolute;
+        top: 8px;
+        left: 8px;
         display: inline-block;
+        z-index: 2;
         padding: 8px 13px;
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 13px;
+        font-size: 1.3rem;
         line-height: 125%;
         color: #d0c8c9;
         background: rgba(47, 34, 36, 0.16);
@@ -87,8 +111,220 @@
         }
     }
 
-    &:hover {
-        filter: brightness(1.2);
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+
+        &_descr,
+        &_rate {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &_rate .star {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-family: var(--third-family);
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 100%;
+            color: var(--color-btn);
+
+            @media (max-width: 575px) {
+                font-size: 1.6rem;
+            }
+
+            &__img g path {
+                fill: var(--color-btn);
+            }
+        }
+
+        &_rate span {
+            margin-left: 5px;
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 100%;
+            color: var(--color-span);
+
+            @media (max-width: 575px) {
+                display: none;
+            }
+        }
+
+        &_title {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 120%;
+            color: var(--color-text-2);
+
+            @media (max-width: 575px) {
+                font-size: 2rem;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &_left {
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                gap: 1px;
+
+                .menu__info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1px;
+
+                    @media (max-width: 575px) {
+                        flex-direction: column-reverse;
+                    }
+
+                    &_city {
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 1.1rem;
+                        line-height: 125%;
+                        color: var(--color-city);
+
+                        @media (max-width: 575px) {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    &_kitchen {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 1.1rem;
+                        line-height: 125%;
+                        color: var(--color-svg);
+
+                        @media (max-width: 575px) {
+                            font-size: 1.3rem;
+                        }
+
+                        @media (max-width: 350px) {
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+
+                        svg {
+                            margin-right: 8px;
+
+                            g path {
+                                fill: var(--color-svg);
+                            }
+                        }
+
+                        span {
+                            display: none;
+                            margin-left: 4px;
+
+                            @media (max-width: 575px) {
+                                display: block;
+                            }
+
+                            @media (max-width: 350px) {
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .menu__price {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    @media (max-width: 575px) {
+                        display: none;
+                    }
+
+                    &_line {
+                        width: 1px;
+                        height: 16px;
+                        background: var(--color-span);
+                        border-radius: 2px;
+                    }
+
+                    &_receipt {
+                        display: block;
+                        width: 15px;
+                        height: 16px;
+                        background: url(../img/receipt.svg) center/cover no-repeat;
+                    }
+
+                    &_amount {
+                        font-family: var(--font-family);
+                        font-weight: 500;
+                        font-size: 1.1rem;
+                        line-height: 125%;
+                        color: var(--color-svg);
+                    }
+                }
+            }
+
+            &_right {
+                padding-top: 5px;
+
+                .currency {
+                    display: none;
+
+                    @media (max-width: 575px) {
+                        display: block;
+                    }
+                }
+
+                .route {
+                    @media (max-width: 575px) {
+                        display: none;
+                    }
+
+                    &__time {
+                        display: flex;
+                        margin-bottom: 6px;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 7px;
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                        line-height: 100%;
+                        color: var(--color-svg);
+
+                        svg path {
+                            fill: var(--color-svg);
+                        }
+                    }
+
+                    &__distance {
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                        line-height: 125%;
+                        text-align: right;
+                        color: var(--color-city);
+                    }
+                }
+            }
+        }
+    }
+
+    .currency {
+        width: 49px;
+        height: 16px;
+        background: url(../img/currency.svg) center/cover no-repeat;
     }
 }
 

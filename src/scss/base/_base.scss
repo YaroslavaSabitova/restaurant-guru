@@ -12,7 +12,9 @@ body {
     transition: all 0.5s ease;
 
     &::after {
-        // content: url(../img/account.svg);
+        content: url(../img/currency.svg) url(../img/en-flag.svg) url(../img/es-flag.svg)
+            url(../img/logo.svg) url(../img/logo-xs.svg) url(../img/photo.png)
+            url(../img/receipt.svg) url(../img/rus-flag.svg);
         position: absolute;
         z-index: -1;
         width: 0;
@@ -28,7 +30,6 @@ body {
     max-width: 144rem;
     margin: 0 auto;
     padding: 0 12rem;
-    border: 1px solid green;
 
     @media (max-width: 991px) {
         padding: 0 3rem;
@@ -45,7 +46,6 @@ body {
     max-width: 144rem;
     margin: 0 auto;
     padding: 28.5px 108px 50px 125px;
-    border: 1px solid rgb(255, 0, 140);
 
     @media (max-width: 991px) {
         padding: 24px 30px 41px 30px;

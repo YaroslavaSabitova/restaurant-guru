@@ -6,13 +6,13 @@ import 'swiper/css/navigation';
 export default function () {
     const swiper = new Swiper('.js_swiper', {
         modules: [Navigation, Autoplay],
-        // autoplay: {
-        //     delay: 3000,
-        // },
+        autoplay: {
+            delay: 3000
+        },
         slidesPerView: 4,
         spaceBetween: 20,
-        // loop: true,
-        // speed: 500,
+        loop: true,
+        speed: 500,
         navigation: {
             nextEl: '.swiper-button-next'
         },
@@ -35,9 +35,9 @@ export default function () {
         }
     });
 
-    // swiper.autoplay.stop();
+    swiper.autoplay.stop();
 
-    // setTimeout(function () {
-    //     swiper.autoplay.start();
-    // }, 1000);
+    setTimeout(function () {
+        swiper.autoplay.start();
+    }, 1000);
 }
