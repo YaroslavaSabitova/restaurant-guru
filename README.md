@@ -22,7 +22,7 @@ For slider I used [Swiper](https://swiperjs.com/), which is installed by modules
 
 ----------------
 
-[**Figma**](https://www.figma.com/file/M0SYAlCAWUMMIusPm0yXdL/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-Restaurant-Guru?type=design&node-id=0-1&mode=design&t=UnEeLKSPPoQknP7S-0)
+[**Figma**](https://www.figma.com/design/GYnKciJ1KDiypq8i1QR00J/Restaurant-Guru?node-id=0-1&t=cst6nvviJv4oCAug-1)
 
 **Project** - https://yaroslavasabitova.github.io/restaurant-guru/
 
